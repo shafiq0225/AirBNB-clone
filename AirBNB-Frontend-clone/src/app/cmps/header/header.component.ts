@@ -7,5 +7,11 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  faBars = faBars
+  faBars = faBars;
+  isShowHeaderMenuModal: boolean = false
+  isOpenLanguageModal: boolean = false
+  
+  onToggleHeaderMenuModal() {
+    this.isShowHeaderMenuModal = !this.isShowHeaderMenuModal
+  } 
 }

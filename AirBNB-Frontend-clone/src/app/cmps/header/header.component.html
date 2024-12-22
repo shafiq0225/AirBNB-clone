@@ -11,11 +11,12 @@
             <div>
                 <span class="language material-symbols-outlined">language</span>
             </div>
-            <div class="menu">
+            <div class="menu" (click)="onToggleHeaderMenuModal()">
                 <fa-icon [icon]="faBars"></fa-icon>
                 <img [src]="'https://res.cloudinary.com/du63kkxhl/image/upload/v1681630492/user-stay/guest_upcxtq.png'" alt="">
                 <!-- <span *ngIf="UserNotification" class="notification">{{UserNotification}}</span> -->
-                
+                <app-header-menu-modal                    
+                 *ngIf="isShowHeaderMenuModal"></app-header-menu-modal>
             </div>
         </nav>
     </div>
