@@ -1,0 +1,70 @@
+@import '../../../../assets/setup/variables';
+@import '../../../../assets/setup/mixins';
+@import '../../../../assets/setup/function';
+
+
+.header-filter {
+    @include center-absolute();
+    top: 40px;
+    z-index: 10;
+    transition: .4s;
+
+    &.active {
+        top: 135px;
+    }
+
+    >* {
+        display: flex;
+        align-items: center;
+        border: 1px solid $border-color;
+        border-radius: 40px;
+        box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+        transition: box-shadow 0.2s ease;
+        font-size: rem(14px);
+    }
+
+    .header-filter-close {
+        width: 348px;
+        height: 48px;
+    
+        @include for-mobile-layout {
+          width: 100%;
+        }
+    
+        span {
+          max-width: 150px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+    
+        >* {
+          cursor: pointer;
+          padding: 0 16px;
+          font-weight: 600;
+    
+          @include for-mobile-layout {
+            padding: 0 12px;
+          }
+    
+          &:nth-child(2) {
+            border-right: 1px solid $border-color;
+            border-left: 1px solid $border-color;
+          }
+    
+          &:nth-child(3) {
+            color: $main-color;
+            font-weight: 400;
+          }
+    
+          .icon-container {
+            @include center-flex();
+            background-color: $secondary-color;
+            border-radius: 50%;
+            height: 32px;
+            width: 32px;
+            color: #ffffff;
+          }
+        }
+      }
+}

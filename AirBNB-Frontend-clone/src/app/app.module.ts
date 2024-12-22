@@ -3,14 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app-root/app.component';
+import { StayIndexComponent } from './pages/stay-index/stay-index.component';
+import { HeaderComponent } from './cmps/header/header.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HeaderFilterComponent } from './cmps/header-filter-folder/header-filter/header-filter.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StayIndexComponent,
+    HeaderComponent,
+    HeaderFilterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
