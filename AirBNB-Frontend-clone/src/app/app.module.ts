@@ -8,6 +8,7 @@ import { HeaderComponent } from './cmps/header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeaderFilterComponent } from './cmps/header-filter-folder/header-filter/header-filter.component';
 import { HeaderMenuModalComponent } from './cmps/header-menu-modal/header-menu-modal.component';
+import { StayFilterComponent } from './cmps/stay-filter/stay-filter.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HeaderMenuModalComponent } from './cmps/header-menu-modal/header-menu-m
     StayIndexComponent,
     HeaderComponent,
     HeaderFilterComponent,
-    HeaderMenuModalComponent
+    HeaderMenuModalComponent,
+    StayFilterComponent
   ],
   imports: [
     BrowserModule,
