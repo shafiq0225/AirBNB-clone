@@ -1,5 +1,5 @@
 <header class="main-layout full">
-    <div class="header-content">
+    <div [ngClass]="isHeaderFilterActive ? 'header-content filter-active' : 'header-content'">
         <div class="logo">
             <img src="https://res.cloudinary.com/du63kkxhl/image/upload/v1681629704/logo_smny53.png" alt="">
             <h2>airbnb</h2>
@@ -20,5 +20,7 @@
             </div>
         </nav>
     </div>
-    <app-header-filter></app-header-filter>
+    <app-header-filter *ngIf="isShowFilter"
+     [isHeaderFilterActive]="isHeaderFilterActive"
+     (toggleHeaderFilter)="toggleHeaderFilter()"></app-header-filter>
 </header>
