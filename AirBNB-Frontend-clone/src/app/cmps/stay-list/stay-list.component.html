@@ -1,0 +1,5 @@
+<ul *ngIf="stays?.length" class="stay-list">
+    <li *ngFor="let stay of stays">
+      <app-stay-preview [stay]="stay"></app-stay-preview>
+    </li>
+  </ul>

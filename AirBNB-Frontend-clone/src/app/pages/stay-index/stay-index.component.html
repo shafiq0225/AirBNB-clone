@@ -1,4 +1,9 @@
 <section class="stay-index">
     <app-header [isShowFilter]="true"></app-header>
     <app-stay-filter></app-stay-filter>
+    <main class="main-layout">
+        <div #elFooter>
+            <app-stay-list [stays]="stays$ | async"></app-stay-list>
+        </div>
+    </main>
 </section>

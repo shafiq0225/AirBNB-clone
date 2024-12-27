@@ -1,33 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-
-export interface Order {
-  _id: string,
-  buyer: {
-    _id: string,
-    fullname: string
-  },
-  totalPrice: number,
-  startDate: Date,
-  endDate: Date,
-  guests: Guest,
-  stay: {
-    _id: string,
-    name: string,
-    price: number
-  },
-  host: {
-    _id: string,
-    fullname: string,
-  }
-  status: string
-}
-export interface Guest {
-  adults: number
-  children: number
-  infants: number
-  pets: number
-}
+import { Order } from '../../../models/order.model';
 
 @Component({
   selector: 'app-header-filter',
