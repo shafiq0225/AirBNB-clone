@@ -14,6 +14,11 @@ app.use(compression())
 const http = require('http').createServer(app)
 
 if (process.env.NODE_ENV === 'production') {
+      const corsOptions = {
+            origin: ['http://127.0.0.1:4200', 'https://airbnb-clone-frontend-8w55.onrender.com'],
+            credentials: true
+      };
+      app.use(cors(corsOptions))
       app.use(express.static(path.resolve(__dirname, 'public')))
 } else {
       const corsOptions = {
