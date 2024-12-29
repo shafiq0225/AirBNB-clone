@@ -8,7 +8,7 @@ export class HttpService {
 
   constructor(private http: HttpClient) { }
 
-  BASE_URL = isDevMode() ? 'https://airbnb-clone-backend-ne7i.onrender.com/api/' : '/api/'
+  BASE_URL = isDevMode() ? 'https://airbnb-clone-backend-ne7i.onrender.com/api/' : 'https://airbnb-clone-backend-ne7i.onrender.com/api/'
   // BASE_URL = isDevMode() ? '//localhost:3030/api/' : '/api/'
   // BASE_URL = isDevMode() ? 'https://airbnb-rktw.onrender.com/api/' : '/api/'
 
