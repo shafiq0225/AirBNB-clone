@@ -1,9 +1,16 @@
 <section class="stay-index">
     <app-header [isShowFilter]="true"></app-header>
     <app-stay-filter></app-stay-filter>
-    <main class="main-layout">
-        <div #elFooter>
+    <main *ngIf="!this.loader.getLoading() || isLoadStay" class="main-layout">
+        <div #elFooter (window:scroll)="onPageScroll()">
             <app-stay-list [stays]="stays$ | async"></app-stay-list>
+            <app-footer></app-footer>
         </div>
     </main>
+    <a *ngIf="isShowScroller" (click)="onPageUp()" class="scroller-up"><span
+        class="material-symbols-outlined">expand_less</span></a>
+    <!-- <skeleton-loader *ngIf="this.loader.getLoading()"></skeleton-loader>
+    <a *ngIf="isShowClearBtn" (click)="onClearFilter()" loading="eager" class="clear-filter">
+      <img src="https://res.cloudinary.com/du63kkxhl/image/upload/v1681631046/stay/clear-filter_cbxntm.png" alt="">
+    </a> -->
 </section>

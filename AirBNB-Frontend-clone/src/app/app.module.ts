@@ -13,6 +13,7 @@ import { StayListComponent } from './cmps/stay-list/stay-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StayPreviewComponent } from './cmps/stay-preview/stay-preview.component';
 import { ImgCarouselComponent } from './cmps/img-carousel/img-carousel.component';
+import { FooterComponent } from './cmps/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ImgCarouselComponent } from './cmps/img-carousel/img-carousel.component
     StayFilterComponent,
     StayListComponent,
     StayPreviewComponent,
-    ImgCarouselComponent
+    ImgCarouselComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

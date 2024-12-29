@@ -34,7 +34,7 @@ export class StayService {
 
   public async setFilterAsync(filter: StayFilter) {
     this._stayFilter$.next(filter);
-    // this.loadFullLength();
+    this.loadFullLength();
     await this.loadStays(0, false);
   }
 
