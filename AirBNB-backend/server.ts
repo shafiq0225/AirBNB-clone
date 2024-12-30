@@ -15,7 +15,7 @@ const http = require('http').createServer(app)
 
 if (process.env.NODE_ENV === 'production') {
       const corsOptions = {
-            origin: ['http://127.0.0.1:4200', 'https://airbnb-clone-frontend-8w55.onrender.com'],
+            origin: ['https://shafiq0225.github.io/AirBNB-clone', 'https://airbnb-clone-frontend-8w55.onrender.com'],
             credentials: true
       };
       app.use(cors(corsOptions))
