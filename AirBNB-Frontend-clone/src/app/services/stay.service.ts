@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpService } from './http.service';
-import { BehaviorSubject, lastValueFrom } from 'rxjs';
+import { BehaviorSubject, lastValueFrom, Observable } from 'rxjs';
 import { Stay, StayFilter } from '../models/stay.model';
 
 @Injectable({
@@ -62,5 +62,10 @@ export class StayService {
     const stays = await lastValueFrom(this.httpService.get(this.STAY_URL + queryParams, null)) as Stay[]
     this._stays$.next(prevStays.concat(stays))
     console.log(this._stayFilter$.value)
+  }
+
+  
+  public getById(stayId: string): Observable<Stay> {
+    return this.httpService.get(this.STAY_URL + stayId, null) as Observable<Stay>
   }
 }

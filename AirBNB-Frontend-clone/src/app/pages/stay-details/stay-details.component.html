@@ -1,0 +1,22 @@
+<section class="stay-details">
+    <app-header [isShowFilter]="false"></app-header>
+    <div class="main-layout">
+        <header id="photos">
+            <div class="header-info">
+                <h1>{{stay.name}}</h1>
+                <div class="flex align-center">
+                    <div class="rate">
+                      <fa-icon class="star" [icon]="starIcon"></fa-icon>
+                      <span>{{getRateAvg()}}</span>
+                    </div>
+                    <fa-icon class="point" [icon]="point"></fa-icon>
+                    <a href="#reviews" class="reviews">{{stay.reviews.length}} {{'Reviews'}}</a>
+                    <fa-icon class="point" [icon]="point"></fa-icon>
+                    <div class="loc">
+                      <a href="#location">{{stay.loc.address}}</a>
+                    </div>
+                  </div>
+            </div>
+        </header>
+    </div>
+</section>

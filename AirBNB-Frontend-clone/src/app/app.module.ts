@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { StayPreviewComponent } from './cmps/stay-preview/stay-preview.component';
 import { ImgCarouselComponent } from './cmps/img-carousel/img-carousel.component';
 import { FooterComponent } from './cmps/footer/footer.component';
+import { StayDetailsComponent } from './pages/stay-details/stay-details.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FooterComponent } from './cmps/footer/footer.component';
     StayListComponent,
     StayPreviewComponent,
     ImgCarouselComponent,
-    FooterComponent
+    FooterComponent,
+    StayDetailsComponent
   ],
   imports: [
     BrowserModule,
