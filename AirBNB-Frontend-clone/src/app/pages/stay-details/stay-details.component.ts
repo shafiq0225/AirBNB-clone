@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { StatReviews, Stay } from '../../models/stay.model';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
-import { faCircle, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUpFromBracket, faCircle, faHeart, faStar } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-stay-details',
@@ -13,8 +13,11 @@ export class StayDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
   stay!: Stay;
   staySubscription!: Subscription;
+  isLikeByUser: boolean = false;
   starIcon = faStar;
   point = faCircle;
+  shareIcon = faArrowUpFromBracket;
+  heartIcon = faHeart;
 
   ngOnInit(): void {
     // this.orderSubscription = this.orderService.order$.subscribe(order => this.order = order)

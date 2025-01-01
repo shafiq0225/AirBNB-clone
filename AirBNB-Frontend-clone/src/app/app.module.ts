@@ -17,6 +17,9 @@ import { FooterComponent } from './cmps/footer/footer.component';
 import { StayDetailsComponent } from './pages/stay-details/stay-details.component';
 import { SkeletonLoaderComponent } from './cmps/skeleton-loader/skeleton-loader.component';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { SpecialPerksComponent } from './cmps/special-perks/special-perks.component';
+import { AmenitiesListComponent } from './cmps/amenities-list/amenities-list.component';
+import { AmenitiesPreviewComponent } from './cmps/amenities-preview/amenities-preview.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
     ImgCarouselComponent,
     FooterComponent,
     StayDetailsComponent,
-    SkeletonLoaderComponent
+    SkeletonLoaderComponent,
+    SpecialPerksComponent,
+    AmenitiesListComponent,
+    AmenitiesPreviewComponent
   ],
   imports: [
     BrowserModule,

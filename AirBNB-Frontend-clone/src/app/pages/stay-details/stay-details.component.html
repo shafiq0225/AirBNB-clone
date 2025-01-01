@@ -17,6 +17,45 @@
                     </div>
                   </div>
             </div>
+            <div class="share-save">
+              <span class="share">
+                <fa-icon [icon]="shareIcon"></fa-icon>
+                <span>{{'Share'}}</span>
+              </span>
+              <span class="save">
+                <fa-icon [ngClass]="isLikeByUser ? 'active like' : 'like'" [icon]="heartIcon"></fa-icon>
+                <span>{{'Saved'}}</span>
+              </span>
+            </div>
         </header>
+        <div class="img-container">
+          <img loading="lazy" *ngFor="let imgUrl of stay.imgUrls" class="img" [src]="imgUrl" alt="">
+        </div>     
+        <div #element class="stay-order-info">
+          <div class="stay-information">
+            <div class="subtitle">
+              <div class="subtitle-content">
+                <h2>{{stay.roomType}} hosted by {{stay.host.fullname}}</h2>
+                <div>
+                  <span>{{stay.capacity}} {{'Guests'}}</span>
+                  <fa-icon class="point" [icon]="point"></fa-icon>
+                  <span>{{stay.bathrooms}} {{'Bathroom'}}</span>
+                  <fa-icon class="point" [icon]="point"></fa-icon>
+                  <span>{{stay.bedrooms}} {{'Bedrooms'}}</span>
+                </div>
+              </div>
+              <img [src]="stay.host.pictureUrl" alt="">
+            </div>
+            <app-special-perks [stay]="stay"></app-special-perks>
+            <div class="air-cover">
+              <h2><span>air</span>cover</h2>
+              <div>{{'Every booking includes free protection from Host cancellations, listing inaccuracies, and other issues like trouble checking in.'}}</div>
+            </div>
+            <div class="des">
+              {{stay.summary}}
+            </div>
+            <app-amenities-list  id="amenities" [stay]="stay"></app-amenities-list>
+          </div>
+        </div>   
     </div>
 </section>
