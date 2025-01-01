@@ -15,6 +15,8 @@ import { StayPreviewComponent } from './cmps/stay-preview/stay-preview.component
 import { ImgCarouselComponent } from './cmps/img-carousel/img-carousel.component';
 import { FooterComponent } from './cmps/footer/footer.component';
 import { StayDetailsComponent } from './pages/stay-details/stay-details.component';
+import { SkeletonLoaderComponent } from './cmps/skeleton-loader/skeleton-loader.component';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @NgModule({
   declarations: [
@@ -28,13 +30,15 @@ import { StayDetailsComponent } from './pages/stay-details/stay-details.componen
     StayPreviewComponent,
     ImgCarouselComponent,
     FooterComponent,
-    StayDetailsComponent
+    StayDetailsComponent,
+    SkeletonLoaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxSkeletonLoaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

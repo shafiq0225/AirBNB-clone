@@ -4,8 +4,9 @@
     <main *ngIf="!this.loader.getLoading() || isLoadStay" class="main-layout">
         <div #elFooter (window:scroll)="onPageScroll()">
             <app-stay-list [stays]="stays$ | async"></app-stay-list>
-            <app-footer></app-footer>
+            <app-skeleton-loader *ngIf="this.loader.getLoading() && isLoadStay"></app-skeleton-loader>            
         </div>
+        <app-footer></app-footer>
     </main>
     <a *ngIf="isShowScroller" (click)="onPageUp()" class="scroller-up"><span
         class="material-symbols-outlined">expand_less</span></a>
