@@ -20,6 +20,8 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { SpecialPerksComponent } from './cmps/special-perks/special-perks.component';
 import { AmenitiesPreviewComponent } from './cmps/details/amenities-preview/amenities-preview.component';
 import { AmenitiesListComponent } from './cmps/details/amenities-list/amenities-list.component';
+import { ReviewListComponent } from './cmps/details/review-list/review-list.component';
+import { ReviewPreviewComponent } from './cmps/details/review-preview/review-preview.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { AmenitiesListComponent } from './cmps/details/amenities-list/amenities-
     SkeletonLoaderComponent,
     SpecialPerksComponent,
     AmenitiesListComponent,
-    AmenitiesPreviewComponent
+    AmenitiesPreviewComponent,
+    ReviewListComponent,
+    ReviewPreviewComponent
   ],
   imports: [
     BrowserModule,
