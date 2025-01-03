@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Stay } from '../../models/stay.model';
+import { Stay } from '../../../models/stay.model';
 
 @Component({
   selector: 'app-amenities-list',

@@ -18,8 +18,8 @@ import { StayDetailsComponent } from './pages/stay-details/stay-details.componen
 import { SkeletonLoaderComponent } from './cmps/skeleton-loader/skeleton-loader.component';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { SpecialPerksComponent } from './cmps/special-perks/special-perks.component';
-import { AmenitiesListComponent } from './cmps/amenities-list/amenities-list.component';
-import { AmenitiesPreviewComponent } from './cmps/amenities-preview/amenities-preview.component';
+import { AmenitiesPreviewComponent } from './cmps/details/amenities-preview/amenities-preview.component';
+import { AmenitiesListComponent } from './cmps/details/amenities-list/amenities-list.component';
 
 @NgModule({
   declarations: [
