@@ -10,8 +10,8 @@
     </main>
     <a *ngIf="isShowScroller" (click)="onPageUp()" class="scroller-up"><span
         class="material-symbols-outlined">expand_less</span></a>
-    <!-- <skeleton-loader *ngIf="this.loader.getLoading()"></skeleton-loader>
-    <a *ngIf="isShowClearBtn" (click)="onClearFilter()" loading="eager" class="clear-filter">
+    <app-skeleton-loader *ngIf="this.loader.getLoading()"></app-skeleton-loader>
+    <!-- <a *ngIf="isShowClearBtn" (click)="onClearFilter()" loading="eager" class="clear-filter">
       <img src="https://res.cloudinary.com/du63kkxhl/image/upload/v1681631046/stay/clear-filter_cbxntm.png" alt="">
     </a> -->
 </section>
